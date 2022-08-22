@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Ubuntu+Mono&display=swap');
+
+body {
+    margin: auto;
+    width: 80%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 310px);
+    gap: 50px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.grid > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+
+input {
+    width: 180px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #828282;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 20px;
+    color: #828282;
+    outline: none;
+}
+
+input::placeholder {
+    margin-left: 10px;
+}
+
+input:hover {
+    border: 1px solid #333333;
+}
+
+input:focus {
+    border: 1px solid #2962FF;
+}
+
+input:focus ~ label {
+    color: #2962FF;
+}
+
+input:focus ~ h5 {
+    color: #2962FF;
+}
+
+label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+h4 {
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* Error */
+
+input[error] {
+    border: 1px solid #D32F2F;
+}
+
+input[error] ~ label {
+    color: #D32F2F;
+}
+
+input[error] ~ h5 {
+    color: #D32F2F;
+}
+
+input[error]:hover {
+    border: 1px solid #333333;
+}
+
+input[error]:hover ~ label {
+    color: #333333;
+}
+
+input[error]:hover ~ h5 {
+    color: #828282;
+}
+
+input[error]:focus {
+    border: 1px solid #D32F2F;
+}
+
+input[error]:focus ~ label {
+    color: #D32F2F;
+}
+
+input[error]:focus ~ h5 {
+    color: #D32F2F;
+}
+
+/* Disabled */
+
+input[disabled] {
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
+}
+
+/* Helper Text */
+
+h5 {
+    font-family: 'Noto Sans JP';
+    order: -1;
+    font-weight: 400;
+    font-size: 10px;
+    color: #828282;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+div > div > div {
+    order: -1;
+    position: relative;
+}
+
+[startIcon] ~ span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+[startIcon] {
+    padding-left: 40px;
+    width: 160px;
+}
+
+[endIcon] ~ span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55%
+}
+
+[size="sm"] {
+    height: 35px;
+}
+
+[size="md"] {
+    height: 50px;
+}
+
+[size="lg"] {
+    height: 65px;
+}
+
+[fullWidth] {
+    width: 100%;
+}
+
+/* [multiline] {
+    word-break: break-word;
+} */
+
+textarea {
+    border: 1px solid #828282;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 20px;
+    color: #828282;
+    outline: none;
+    border-radius: 8px;
+    order: -1;
+}
